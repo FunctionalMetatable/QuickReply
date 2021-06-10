@@ -28,7 +28,8 @@
 	<body style="margin: 0;">
 		<header id="header"></header>
 
-		<div class="TOC">
+		<div id="app">
+			<div class="TOC">
 			<h3 v-for="forum in forum" style="text-align: center;">
 				<a :href="`#${forum.name.toLowerCase()}`">
 					{{ forum.name }}
@@ -49,6 +50,7 @@
 			</div>
 			<br />
 			<br />
+		</div>
 		</div>
 		
 		<div class="privacyWarning" id="privacyWarning"></div>
@@ -120,7 +122,7 @@
 							]
 					}
 				}
-			})
+			}).mount('#app')
 		</script>
 		<script>
 			function copy(id) {
